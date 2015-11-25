@@ -1,13 +1,20 @@
-import { log } from '../lib/bondage.js';
+import { log, err } from '../lib/bondage.js';
+import * as config from './config.js';
+import status from './status.js';
 
 let _HTMLElement = function() {};
 _HTMLElement.prototype = HTMLElement.prototype;
 
-class MyElement extends _HTMLElement {
+class AFKFunCup extends _HTMLElement {
 
     createdCallback() {
         this.setAttribute('element-created', '');
         log('element created');
+
+        config.register(this.getAttribute('sheet-id'))
+            .then(status)
+            .then(log);
+
     }
 
     attachedCallback() {
@@ -21,4 +28,4 @@ class MyElement extends _HTMLElement {
 
 }
 
-document.registerElement('my-element', MyElement);
+document.registerElement('afk-funcup', AFKFunCup);
