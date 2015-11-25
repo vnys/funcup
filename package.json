@@ -10,7 +10,8 @@
     ]
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install && npm start",
+    "postinstall": "npm run bower:install && npm start",
+    "bower:install": "./node_modules/bower/bin/bower install",
     "start": "npm run watch:js & npm run watch:css & npm run serve",
     "preserve": "npm run build:js & npm run build:css",
     "serve": "browser-sync start --server public --server dist --server bower_components --files 'dist/*, public/*'",
