@@ -1,5 +1,5 @@
 {
-	"name": "boilerplate",
+	"name": "funcup",
 	"devDependencies": {
 		"document-register-element": "latest",
 		"normalize-css": "latest"
