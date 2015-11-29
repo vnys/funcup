@@ -1,6 +1,8 @@
 import { log, err } from '../lib/bondage.js';
 import * as config from './config.js';
 import status from './status.js';
+import lagnavn from './lagnavn.js';
+import gruppespill from './gruppespill.js';
 
 let _HTMLElement = function() {};
 _HTMLElement.prototype = HTMLElement.prototype;
@@ -12,7 +14,7 @@ class AFKFunCup extends _HTMLElement {
         log('element created');
 
         config.register(this.getAttribute('sheet-id'))
-            .then(status)
+            .then(gruppespill)
             .then(log);
 
     }
