@@ -1,13 +1,56 @@
 @import 'element.css';
 
 body {
-    background: silver;
-    display: flex;
+    margin: 20px;
+    background: #fff;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: center;*/
+    /*height: 100vh;*/
 
-    my-element {
+    @nest & my-element {
         font-style: italic;
+        background: orange;
     }
+}
+
+table {
+
+    margin-top: 2em;
+
+    @nest & caption {
+        text-align: left;
+        margin-bottom: .2em;
+        text-transform: uppercase;
+        font-size: .8em;
+        font-weight: bold;
+    }
+
+    @nest & th, & td {
+        padding: .2em .5em;
+    }
+
+    @nest & th {
+        background: #ccc;
+        font-weight: bold;
+    }
+
+    @nest & td {
+        text-align: center;
+        border-top: 1px solid silver;
+    }
+
+    @nest & tr {
+        @nest & td {
+           background: #efefef;
+       }
+        @nest &:nth-child(odd) td {
+            background: white;
+        }
+    }
+
+
+
+
+
 }

@@ -2,6 +2,6 @@
 	"name": "funcup",
 	"devDependencies": {
 		"document-register-element": "latest",
-		"normalize-css": "latest"
+		"normalize-css": "latest"		
 	}
 }

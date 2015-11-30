@@ -15,7 +15,23 @@ class AFKFunCup extends _HTMLElement {
 
         config.register(this.getAttribute('sheet-id'))
             .then(gruppespill)
-            .then(log);
+            .then( data => {
+
+                document.body.appendChild(data.matches.a);
+                document.body.appendChild(data.results.a);
+
+                document.body.appendChild(data.matches.b);
+                document.body.appendChild(data.results.b);
+
+                document.body.appendChild(data.matches.c);
+                document.body.appendChild(data.results.c);
+
+                document.body.appendChild(data.matches.d);
+                document.body.appendChild(data.results.d);
+
+                console.log(data);
+            });
+            // .then(log);
 
     }
 

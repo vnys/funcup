@@ -19,7 +19,8 @@
     "watch:css": "chokidar 'css/*.css' -c 'npm run build:css'",
     "build:js": "mkdir -p dist && rollup -c -o dist/script.js",
     "build:js:backup": "mkdir -p dist && rollup js/script.js | ./node_modules/babel-cli/bin/babel.js --out-file dist/script.js",
-    "build:css": "postcss  -u postcss-import -u autoprefixer --autoprefixer.browsers 'last 2 versions' -u postcss-nested -o dist/style.css css/index.css"
+    "build:css": "postcss  -u postcss-import -u autoprefixer --autoprefixer.browsers 'last 2 versions' -u postcss-nesting -o dist/style.css css/index.css",
+    "handlebars:compile": "handlebars ./templates/match.handlebars -f ./templates/match.js"
   },
   "repository": {
     "type": "git",
@@ -46,7 +47,7 @@
     "chokidar-cli": "latest",
     "postcss-cli": "latest",
     "postcss-import": "latest",
-    "postcss-nested": "latest",
+    "postcss-nesting": "latest",
     "rollup": "latest",
     "rollup-plugin-babel": "latest"
   }
