@@ -17,17 +17,17 @@ class AFKFunCup extends _HTMLElement {
             .then(gruppespill)
             .then( data => {
 
-                document.body.appendChild(data.matches.a);
-                document.body.appendChild(data.results.a);
+                this.appendChild(data.matches.a);
+                this.appendChild(data.results.a);
 
-                document.body.appendChild(data.matches.b);
-                document.body.appendChild(data.results.b);
+                this.appendChild(data.matches.b);
+                this.appendChild(data.results.b);
 
-                document.body.appendChild(data.matches.c);
-                document.body.appendChild(data.results.c);
+                this.appendChild(data.matches.c);
+                this.appendChild(data.results.c);
 
-                document.body.appendChild(data.matches.d);
-                document.body.appendChild(data.results.d);
+                this.appendChild(data.matches.d);
+                this.appendChild(data.results.d);
 
                 console.log(data);
             });
