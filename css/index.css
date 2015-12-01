@@ -1,7 +1,7 @@
 @import 'element.css';
 
 body {
-    margin: 20px;
+
     background: #fff;
     /*display: flex;
     justify-content: center;
@@ -12,6 +12,21 @@ body {
         font-style: italic;
         background: orange;
     }
+}
+
+.banner {
+    background: silver;
+    padding: 20px;
+    @nest & h1 {
+        margin: 0;
+        margin-bottom: .5em;
+        font-weight: normal;
+        font-size: 1.4em;
+    }
+}
+
+main {
+    margin: 20px;
 }
 
 table {
